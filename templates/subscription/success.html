@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content-title %} Inscrição Realizada com Sucesso {% endblock %}
+
+{% block content %}
+	<p>Parabéns {{ subscription.nome }},</p>
+	<p>sua inscrição foi realizada em
+		{{ subscription.criado_em|date:"d/m/Y" }}.
+	</p>
+	<p>Em breve, entraremos em contato pelo
+	{% if subscription.fone %}
+		telefone {{ subscription.fone }}
+	{% else %}
+		e-mail {{ subscription.email }}
+	{% endif %}
+	</p>
+{% endblock content %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content-title %} {{ title }} {% endblock %}
+
+{% block content %}
+<form name='subscription_form' action="" enctype="multipart/form-data" method="post"> {% csrf_token %}
+    {% for hidden in form.hidden_fields %}
+        {{ hidden }}
+        {% if field.errors %}<tr><td></td><td>{{ field.errors }}</td></tr>{% endif %}
+    {% endfor %}
+    <table>
+        {% for field in form.visible_fields %}
+        <tr>
+            <td align="right" width=30%>{% if field.required %}*{% endif %}{{ field.label_tag }}: </td>
+            <td align="left">{{ field }}</td> 
+        </tr><tr>
+            <td></td>
+            <td align="left" class="help_text">{{ field.help_text }}</td>
+        </tr>
+        {% if field.errors %}<tr><td></td><td>{{ field.errors }}</td></tr>{% endif %}
+        {% endfor %}
+        <tr>
+            <td colspan=2 align="right">
+                 <div id='tool'>
+                     <a class='salvar' href='javascript:document.subscription_form.submit();'>Salvar</a>
+                    <a class='cancelar' href='javascript:history.go(-1)'>Cancelar</a>
+                 </div>
+            </td>
+        </tr>
+    </table>
+    <p></p>
+</form>
+{% endblock %}

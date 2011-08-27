@@ -1,52 +1,11 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-<title> Eventex </title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta http-equiv="Content-Style-Type" content="text/css" />
-<link href="{{ STATIC_URL }}css/style.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-	<div class="tail-top">
-		<div class="tail-bottom">
-			<div id="main">
-<!-- header -->
-				<div id="header">
-					<div class="row-2">
-						<div class="indent">
-							<img alt="" src="{{ STATIC_URL }}images/logo1.jpg" />
-						</div>
-					</div>
-					<div class="row-3">
-						<ul class="site-nav">
-							<li><a>Home</a></li>
-						</ul>
-					</div>
-				</div>
-<!-- content -->
-			  <div id="content">
-			    <div class="wrapper">
-                  <div class="col-1">
-                      <h2>Seja Bem-Vindo ao EventeX!</h2>
-                      <p> O evento mais sensacional do ano depois do Dev in Rio! </p>
-					  <p> Você não pode perder essa oportunidade!! </p>
-					  <p> As inscrições começam em 21/08/2011.</p>                    
-                 </div>
-		        </div>
-			  </div>
-			</div>
-<!-- footer -->
-				<div id="footer">
-					<div class="indent">
-						<div class="fright"><a href="http://www.djangoproject.com/"><img src="http://media.djangoproject.com/img/badges/djangosite100x25.gif" border="0" alt="DjangoSite." title="DjangoSite."></a><br>
-						</div>
-						<div class="fleft"> Para mais informações entre em contato com: eventex@eventex.com.br 
-						<br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png"></a></br>						
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block content-title %}
+	Seja Bem-Vindo ao EventeX!
+{% endblock %}
+
+{% block content %}
+	O evento mais sensacional do ano depois do Dev in Rio! </p>
+	Você não pode perder essa oportunidade! </p>
+	<a href="/inscricao">Inscreva-se Já!</a>	
+{% endblock %}

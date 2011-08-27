@@ -30,11 +30,11 @@ DATABASES = {
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'America/Maceio'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br'
 
 SITE_ID = 1
 
@@ -123,11 +123,11 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'core',
+    'subscription',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -152,3 +152,14 @@ LOGGING = {
         },
     }
 }
+
+#EMAIL_BACKEND =    'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND =    'django.core.mail.backends.console.EmailBackend'
+#EMAIL_BACKEND =    'django.core.mail.backends.dummy.EmailBackend'
+
+#EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = 'localhost'
+EMAIL_HOST_USER = 'email'
+EMAIL_HOST_PASSWORD = 'senha'
+EMAIL_PORT = 25
+EMAIL_USE_TLS = True

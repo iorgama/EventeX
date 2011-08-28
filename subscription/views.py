@@ -6,7 +6,6 @@ from subscription.forms import SubscriptionForm
 from django.views.decorators.csrf import csrf_exempt
 from django.core.mail import send_mail
 from subscription.models import Subscription
-from debian.debtags import reverse
  
 
 #def inscricao(request):

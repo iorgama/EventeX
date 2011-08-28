@@ -1,9 +1,7 @@
-#from django.conf.urls.defaults import patterns, url
 from django.conf.urls.defaults import *
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from core.views import homepage
-from subscription.views import *
-# Uncomment the next two lines to enable the admin:
+from core.views import homepage 
+from subscription.views import inscricao, sucesso
 from django.contrib import admin
 admin.autodiscover()
 
@@ -16,7 +14,6 @@ urlpatterns = patterns('',
 #para app subscription
 urlpatterns += patterns('subscription.views',
     (r'^inscricao/', 'inscricao' ),
-    
 )
 
 

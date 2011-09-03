@@ -7,7 +7,7 @@
     {% for hidden in form.hidden_fields %}
         {{ hidden }}
         {% if field.errors %}<tr><td></td><td>{{ field.errors }}</td></tr>{% endif %}
-    {% endfor %}
+    {% endfor %}     
     <table>
         {% for field in form.visible_fields %}
         <tr>
@@ -15,7 +15,7 @@
             <td align="left">{{ field }}</td> 
         </tr><tr>
             <td></td>
-            <td align="left" class="help_text">{{ field.help_text }}</td>
+            <td align="left">{{ field.help_text }}</td>
         </tr>
         {% if field.errors %}<tr><td></td><td>{{ field.errors }}</td></tr>{% endif %}
         {% endfor %}
